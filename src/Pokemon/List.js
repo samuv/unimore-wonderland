@@ -11,7 +11,15 @@ class PokemonList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pokemons: []
+      pokemons: props.selected || []
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.selected !== this.props.selected) {
+      this.setState({
+        pokemons: nextProps.selected
+      })
     }
   }
 
@@ -24,7 +32,7 @@ class PokemonList extends Component {
         getRandomNumber(76, 100),
         getRandomNumber(100, 151),
       ]
-    })
+    }, () => this.props.onSelectList(this.state.pokemons))
   }
 
   render() {
@@ -51,6 +59,6 @@ class PokemonList extends Component {
       </Row>
     </Fragment>
   }
-}
+};
 
-export default PokemonList
+export default PokemonList;

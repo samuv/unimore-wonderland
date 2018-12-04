@@ -20,8 +20,31 @@
   padding: 20px;
 }
 
+.App-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.App-nav li {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
 .App-link {
-  color: #61dafb;
+  color: #f2522a;
+}
+
+.App-link:hover,
+.App-link--active {
+  color: #636466;
+}
+
+.App-nav li:last-child {
+  margin-right: 0;
 }
 
 @keyframes App-logo-spin {
