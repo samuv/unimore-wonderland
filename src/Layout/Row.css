@@ -1,0 +1,7 @@
+.Row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
