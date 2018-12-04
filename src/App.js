@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PokemonList from './Pokemon/List';
 import Row from './Layout/Row';
 import Box from './Layout/Box';
 import logo from './unimo-logo.svg';
@@ -23,6 +24,7 @@ class App extends Component {
               Il terzo contenuto
             </Box>
           </Row>
+          <PokemonList />
         </div>
       </div>
     );
